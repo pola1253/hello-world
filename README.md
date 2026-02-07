@@ -1,4 +1,4 @@
-# Maksimum w tablicy
+# Zadanie 1 - Maksimum w tablicy
 
 ## Cel
 Celem zadania jest znalezienie maksymalnego elementu
@@ -47,3 +47,14 @@ Algorytm wymaga sprawdzenia każdego elementu tablicy, co
 oznacza jednokrotne przejście przez całą tablicę. Nie 
 istnieje szybsze rozwiązanie dla tego problemu w liniowym
 przeszukiwaniu. 
+
+## Zadanie 2 - NWD (Algorytm Euklidesa)
+
+## Pseudokod
+FUNKCJA NWD(a,b)
+DOPÓKI B =! 0
+r=a mod b
+a=b
+b=r
+KONIEC DOPÓKI
+ZWRÓĆ a
