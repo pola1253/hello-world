@@ -58,3 +58,67 @@ a=b
 b=r
 KONIEC DOPÓKI
 ZWRÓĆ a
+
+## Zadanie 3 - Sortowanie bąbelkowe
+
+## DIAGRAM BLOKOWY (opis tekstowy):
+Start
+→ Inicjuj i = 0, n = długość tablicy
+→ Pętla zewnętrzna: i < n - 1
+→ Pętla wewnętrzna: j = 0 do n - i - 2
+→ Jeśli tab[j] > tab[j + 1], zamień miejscami
+→ Zwiększ j
+→ Koniec pętli wewnętrznej
+→ Zwiększ i
+→ Koniec
+
+## Implementacja (C)
+#include <stdio.h>
+
+int main() {
+
+    int n;
+
+    scanf("%d", &n);
+
+    int tab[n];
+
+    for(int i = 0; i < n; i++) {
+
+        scanf("%d", &tab[i]);
+
+    }
+
+    for(int i = 0; i < n - 1; i++) {
+
+        for(int j = 0; j < n - i - 1; j++) {
+
+            if(tab[j] > tab[j + 1]) {
+
+                int tmp = tab[j];
+
+                tab[j] = tab[j + 1];
+
+                tab[j + 1] = tmp;
+
+            }
+
+        }
+
+    }
+
+    for(int i = 0; i < n; i++) {
+
+        printf("%d ", tab[i]);
+
+    }
+
+    return 0;
+
+}
+ 
+##Test 
+
+Przykład:
+Dane wejściowe: 64, 34, 25, 12, 22, 11, 90
+Wynik: 11, 12, 22, 25, 34, 64, 98
